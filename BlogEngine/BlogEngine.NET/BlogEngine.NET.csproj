@@ -15,13 +15,13 @@
     <RootNamespace>BlogEngine.NET</RootNamespace>
     <AssemblyName>BlogEngine.NET</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.7</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -547,6 +547,57 @@
     <Content Include="Custom\Controls\Defaults\CommentView.ascx" />
     <Content Include="Custom\Controls\Defaults\PostView.ascx" />
     <Content Include="Custom\Media\sample.flv" />
+    <Content Include="Custom\Themes\AncientByte\CommentForm.ascx" />
+    <Content Include="Custom\Themes\AncientByte\CommentView.ascx" />
+    <Content Include="Custom\Themes\AncientByte\css\Main.css">
+      <DependentUpon>_Main.less</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\Main.min.css">
+      <DependentUpon>Main.css</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainBW.css">
+      <DependentUpon>MainBW.less</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainBW.min.css">
+      <DependentUpon>MainBW.css</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainGreen.css">
+      <DependentUpon>MainGreen.less</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainGreen.min.css">
+      <DependentUpon>MainGreen.css</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainRed - Copy.css">
+      <DependentUpon>MainBW.less</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainRed - Copy.min.css">
+      <DependentUpon>MainRed - Copy.css</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainRed.css">
+      <DependentUpon>MainRed.less</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\css\MainRed.min.css">
+      <DependentUpon>MainRed.css</DependentUpon>
+    </Content>
+    <Content Include="Custom\Themes\AncientByte\fonts\fontawesome-webfont.svg" />
+    <Content Include="Custom\Themes\AncientByte\img\carrow.png" />
+    <Content Include="Custom\Themes\AncientByte\img\colorsBW.png" />
+    <Content Include="Custom\Themes\AncientByte\img\colorsGreen.png" />
+    <Content Include="Custom\Themes\AncientByte\img\colorsRed.png" />
+    <Content Include="Custom\Themes\AncientByte\img\facebook.png" />
+    <Content Include="Custom\Themes\AncientByte\img\googleplus.png" />
+    <Content Include="Custom\Themes\AncientByte\img\logo.png" />
+    <Content Include="Custom\Themes\AncientByte\img\rss.png" />
+    <Content Include="Custom\Themes\AncientByte\img\sarrow.png" />
+    <Content Include="Custom\Themes\AncientByte\img\twitter.png" />
+    <Content Include="Custom\Themes\AncientByte\js\bootstrap.min.js" />
+    <Content Include="Custom\Themes\AncientByte\newsletter.html" />
+    <Content Include="Custom\Themes\AncientByte\PostNavigation.ascx" />
+    <Content Include="Custom\Themes\AncientByte\PostView.ascx" />
+    <Content Include="Custom\Themes\AncientByte\RelatedPosts.ascx" />
+    <Content Include="Custom\Themes\AncientByte\theme.png" />
+    <Content Include="Custom\Themes\AncientByte\theme.xml" />
+    <Content Include="Custom\Themes\AncientByte\WidgetContainer.ascx" />
     <Content Include="Custom\Themes\Standard-2015\CommentForm.ascx" />
     <Content Include="Custom\Themes\Standard-2015\CommentView.ascx" />
     <Content Include="Custom\Themes\Standard-2015\css\bootstrap.min.css" />
@@ -727,6 +778,25 @@
     <Content Include="Custom\Widgets\MonthList\widget.cshtml" />
     <Content Include="Custom\Widgets\BlogRoll\widget.cshtml" />
     <Content Include="Custom\Widgets\BlogRoll\edit.cshtml" />
+    <Content Include="Custom\Themes\AncientByte\site.master" />
+    <Content Include="Custom\Themes\AncientByte\css\_Main.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <Content Include="Custom\Themes\AncientByte\css\_ColorsRed.less" />
+    <Content Include="Custom\Themes\AncientByte\fonts\CaviarDreams.ttf" />
+    <Content Include="Custom\Themes\AncientByte\fonts\fontawesome-webfont.eot" />
+    <Content Include="Custom\Themes\AncientByte\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Custom\Themes\AncientByte\fonts\fontawesome-webfont.woff" />
+    <Content Include="Custom\Themes\AncientByte\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Custom\Themes\AncientByte\fonts\FontAwesome.otf" />
+    <Content Include="Custom\Themes\AncientByte\css\MainGreen.less" />
+    <Content Include="Custom\Themes\AncientByte\css\MainRed.less" />
+    <Content Include="Custom\Themes\AncientByte\css\_ColorsGreen.less" />
+    <Content Include="Custom\Themes\AncientByte\css\_ColorsBW.less" />
+    <Content Include="Custom\Themes\AncientByte\css\MainBW.less" />
+    <Content Include="Custom\Widgets\CSSSwitch\widget.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1896,6 +1966,7 @@
     <Compile Include="Custom\Extensions\AkismetFilter.cs" />
     <Compile Include="Custom\Extensions\BBCode.cs" />
     <Compile Include="Custom\Extensions\BreakPost.cs" />
+    <Compile Include="Custom\Extensions\CSSSwitch.cs" />
     <Compile Include="Custom\Extensions\Logger.cs" />
     <Compile Include="Custom\Extensions\MediaElementPlayer.cs" />
     <Compile Include="Custom\Extensions\Recaptcha\Recaptcha.cs" />
@@ -2112,6 +2183,13 @@
     </Compile>
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\Themes\AncientByte\site.master.cs">
+      <DependentUpon>site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\Themes\AncientByte\site.master.designer.cs">
+      <DependentUpon>site.master</DependentUpon>
     </Compile>
     <Compile Include="Custom\Themes\Standard-2015\site.master.cs">
       <DependentUpon>site.master</DependentUpon>
@@ -2400,6 +2478,9 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Custom\Themes\AncientByte\js\ancientbyte.js" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -2416,7 +2497,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64079</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64079/</IISUrl>
+          <IISUrl>http://localhost/BlogEngine.NET</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

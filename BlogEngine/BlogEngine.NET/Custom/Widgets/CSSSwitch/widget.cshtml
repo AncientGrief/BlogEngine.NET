@@ -1,0 +1,23 @@
+﻿@using BlogEngine.Core
+@{
+    //TODO CSS files should be editable and not hardcoded!
+    var title = Model.Title;
+}
+<div class="widget pagelist">
+    <h4 class="widget-header">@title</h4>
+    <div class="widget-content">
+        <ul>
+            <li><a href="#" data-cssfile="mainRed.css" class="cssSwitchLink"><div class="colorsRed"></div></a></li>
+            <li><a href="#" data-cssfile="mainGreen.css" class="cssSwitchLink"><div class="colorsGreen"></div></a></li>
+            <li><a href="#" data-cssfile="mainBW.css" class="cssSwitchLink"><div class="colorsBW"></div></a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.cssSwitchLink').click(function () {
+                document.cookie = 'blogEngine_cssswitch=' + $(this).data('cssfile') + '; expires=Fri, 1 Jan 2100 23:59:59 UTC; path=/';
+                window.location.reload(true);
+            });
+        });
+    </script>
+</div>

@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Custom/Themes/AncientByte/css/Main.css",
+    "inputFile": "Custom/Themes/AncientByte/css/Main.less"
+  },
+  {
+    "outputFile": "Custom/Themes/AncientByte/css/MainGreen.css",
+    "inputFile": "Custom/Themes/AncientByte/css/MainGreen.less"
+  },
+  {
+    "outputFile": "Custom/Themes/AncientByte/css/MainRed.css",
+    "inputFile": "Custom/Themes/AncientByte/css/MainRed.less"
+  },
+  {
+    "outputFile": "Custom/Themes/AncientByte/css/MainBW.css",
+    "inputFile": "Custom/Themes/AncientByte/css/MainBW.less"
+  }
+]

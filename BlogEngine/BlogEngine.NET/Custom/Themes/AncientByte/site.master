@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="AncientByte" Codebehind="site.master.cs" %>
+<%@ Import Namespace="BlogEngine.Core" %>
+<%@ Import Namespace="System.Linq" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>ANCIENTBYTE.software</title>
+	<meta name="description" content="<%#BlogSettings.Instance.Description %>" />
+	
+    <link href="<%# Utils.AbsoluteWebRoot + "Content/font-awesome.min.css"%>" type="text/css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="~/Content/images/blog/blogengine.ico" type="image/x-icon" />
+
+    <link href="~/scripts/syntaxhighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="~/scripts/syntaxhighlighter/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%# ShRoot %>scripts/XRegExp.js"></script>
+    <script type="text/javascript" src="<%# ShRoot %>scripts/shCore.js"></script>
+    <script type="text/javascript" src="<%# ShRoot %>scripts/shAutoloader.js"></script>
+    <script type="text/javascript" src="<%# ShRoot %>shActivator.js"></script>
+    <script type="text/javascript" src="<%# Utils.RelativeWebRoot %>Custom/Themes/AncientByte/js/ancientbyte.js"></script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+ 
+<body class="<%=Resources.labels.LangDirection %>">
+    <form runat="Server">
+	    <div id="PageWrapper">
+            <header>
+		        <div class="pageColLeft header"><div class="logo"></div></div>
+		        <div class="pageColRight header">
+			        <div class="title">
+				        <span class="title_red">ANCIENTBYTE</span><span class="title_grey">.software</span>
+			        </div>
+			        <nav id="MainMenu">
+				        <ul>
+                            <li><a href="<%=Utils.AbsoluteWebRoot %>"><%=Resources.labels.home %></a></li>
+
+                            <%foreach (BlogEngine.Core.Page parentPage in BlogEngine.Core.Page.Pages.Where(p => !p.HasParentPage && p.IsPublished && p.ShowInList).OrderBy(p => p.SortOrder))
+                              { %>
+                            <li data-menu-id="<%=parentPage.Title %>" class="<%= parentPage.HasChildPages ? "hasChildren" : ""%>"><a href="<%=parentPage.RelativeLink %>" class="dropdown-m"><%=parentPage.Title%></a></li>
+                            <% } %>
+
+                            <%--<li><a href="<%=Utils.AbsoluteWebRoot %>archive<%= BlogConfig.FileExtension %>"><%=Resources.labels.archive %></a></li>--%>
+                            <li><a href="<%=Utils.AbsoluteWebRoot %>contact<%= BlogConfig.FileExtension %>"><%=Resources.labels.contact %></a></li>
+				        </ul>
+                        <%--
+                        <ul id="ChildMenu">
+                        <%foreach (BlogEngine.Core.Page parentPage in BlogEngine.Core.Page.Pages.Where(p => !p.HasParentPage && p.IsPublished && p.ShowInList).OrderBy(p => p.SortOrder))
+                        {
+                            foreach (BlogEngine.Core.Page childPage in BlogEngine.Core.Page.Pages.Where(p => p.Parent == parentPage.Id && p.IsPublished))
+                            { %>
+                            <li data-menu-child="<%=parentPage.Title %>" style="display:none"><a href="<%=childPage.RelativeLink %>"><%=childPage.Title %></a></li>
+                            <% }
+                         }%>
+                        </ul>
+                         --%>
+			        </nav>
+		        </div>
+            </header>
+		    <div class="clear"></div>
+		    <div id="Content">
+			    <asp:ContentPlaceHolder ID="cphBody" runat="server" />
+		    </div>
+	    </div>
+        <footer>
+            <p class="text-muted credit">Copyright &copy; <%=DateTime.Now.Year %> <a href="<%=Utils.AbsoluteWebRoot %>"><%=BlogSettings.Instance.Name %></a> - Powered by <a href="http://dotnetblogengine.net" target="_blank">BlogEngine.NET</a> <%=BlogSettings.Instance.Version() %> - Design by AncientGrief</p>
+        </footer>
+
+        <div id="FloatMenu">
+            <% if (Security.IsAdministrator){ %>
+                <a href="<%=Utils.AbsoluteWebRoot %>admin">Admin</a> | 
+            <%} %>
+            <a runat="server" id="aLogin"></a>
+            <blog:WidgetZone ID="TitleWidgetZone" runat="server" ZoneName="Title_Widgets" />
+        </div>
+    </form>
+</body>
+</html>
