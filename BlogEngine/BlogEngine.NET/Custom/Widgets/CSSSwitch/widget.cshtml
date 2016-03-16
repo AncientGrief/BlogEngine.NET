@@ -15,8 +15,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('.cssSwitchLink').click(function () {
+
                 document.cookie = 'blogEngine_cssswitch=' + $(this).data('cssfile') + '; expires=Fri, 1 Jan 2100 23:59:59 UTC; path=/';
-                window.location.reload(true);
+
+                $('body').fadeOut('slow', function () {
+                    window.location.reload(true);
+                });
+                
             });
         });
     </script>
