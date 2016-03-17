@@ -492,6 +492,7 @@ input[type=button] {
     line-height: 1.6;
   }
   #mobileMenu {
+    display: inline;
     position: fixed;
     top: 0;
     width: 100%;
