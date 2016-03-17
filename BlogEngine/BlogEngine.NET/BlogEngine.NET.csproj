@@ -597,6 +597,7 @@
     <Content Include="Custom\Themes\AncientByte\img\colorsGreen.png" />
     <Content Include="Custom\Themes\AncientByte\img\colorsRed.png" />
     <Content Include="Custom\Themes\AncientByte\img\facebook.png" />
+    <Content Include="Custom\Themes\AncientByte\img\favicon.ico" />
     <Content Include="Custom\Themes\AncientByte\img\googleplus.png" />
     <Content Include="Custom\Themes\AncientByte\img\logo.png" />
     <Content Include="Custom\Themes\AncientByte\img\logoGray.png" />

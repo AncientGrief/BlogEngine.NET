@@ -225,7 +225,6 @@ a:hover {
   margin-bottom: 10px !important;
 }
 .comment-item .comment-content p {
-  margin: 0;
   font-size: 1em;
   margin: 10px 0 10px 0;
 }
@@ -466,6 +465,10 @@ input[type=button] {
 }
 .syntaxhighlighter .line {
   font-size: 12px !important;
+}
+#mobileMenu,
+#mobileMenuContent {
+  display: none;
 }
 @media (max-width: 1234px) {
   #FloatMenu,
