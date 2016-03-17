@@ -1,18 +1,27 @@
-﻿[
+[
   {
     "outputFile": "Custom/Themes/AncientByte/css/Main.css",
-    "inputFile": "Custom/Themes/AncientByte/css/Main.less"
+    "inputFile": "Custom/Themes/AncientByte/css/Main.less",
+    "sourceMap": false
   },
   {
     "outputFile": "Custom/Themes/AncientByte/css/MainGreen.css",
-    "inputFile": "Custom/Themes/AncientByte/css/MainGreen.less"
+    "inputFile": "Custom/Themes/AncientByte/css/MainGreen.less",
+    "sourceMap": false
   },
   {
     "outputFile": "Custom/Themes/AncientByte/css/MainRed.css",
-    "inputFile": "Custom/Themes/AncientByte/css/MainRed.less"
+    "inputFile": "Custom/Themes/AncientByte/css/MainRed.less",
+    "sourceMap": false
   },
   {
     "outputFile": "Custom/Themes/AncientByte/css/MainBW.css",
-    "inputFile": "Custom/Themes/AncientByte/css/MainBW.less"
+    "inputFile": "Custom/Themes/AncientByte/css/MainBW.less",
+    "sourceMap": false
+  },
+  {
+    "outputFile": "Custom/Themes/AncientByte/css/_ColorsBW.css",
+    "inputFile": "Custom/Themes/AncientByte/css/_ColorsBW.less",
+    "sourceMap": false
   }
 ]

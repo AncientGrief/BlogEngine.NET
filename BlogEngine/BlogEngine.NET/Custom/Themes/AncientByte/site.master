@@ -26,6 +26,7 @@
     <script type="text/javascript" src="<%# ShRoot %>scripts/shAutoloader.js"></script>
     <script type="text/javascript" src="<%# ShRoot %>shActivator.js"></script>
     <script type="text/javascript" src="<%# Utils.RelativeWebRoot %>Custom/Themes/AncientByte/js/ancientbyte.js"></script>
+
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
 </head>
  
@@ -66,20 +67,28 @@
             </header>
 		    <div class="clear"></div>
 		    <div id="Content">
-			    <asp:ContentPlaceHolder ID="cphBody" runat="server" />
+                <div id="bodyContent">
+			        <asp:ContentPlaceHolder ID="cphBody" runat="server" />
+                </div>
 		    </div>
+            
 	    </div>
         <footer>
             <p class="text-muted credit">Copyright &copy; <%=DateTime.Now.Year %> <a href="<%=Utils.AbsoluteWebRoot %>"><%=BlogSettings.Instance.Name %></a> - Powered by <a href="http://dotnetblogengine.net" target="_blank">BlogEngine.NET</a> <%=BlogSettings.Instance.Version() %> - Design by AncientGrief</p>
         </footer>
 
         <div id="FloatMenu">
-            <% if (Security.IsAdministrator){ %>
-                <a href="<%=Utils.AbsoluteWebRoot %>admin">Admin</a> | 
-            <%} %>
-            <a runat="server" id="aLogin"></a>
+            <div class="floatControls">
+                <% if (Security.IsAdministrator){ %>
+                    <a href="<%=Utils.AbsoluteWebRoot %>admin">Admin</a> | 
+                <%} %>
+                <a runat="server" id="aLogin"></a>
+            </div>
             <blog:WidgetZone ID="TitleWidgetZone" runat="server" ZoneName="Title_Widgets" />
         </div>
+
+        <blog:WidgetZone ID="SidebarWidgetZone" runat="server" ZoneName="Side_Widgets" />
+
     </form>
 </body>
 </html>

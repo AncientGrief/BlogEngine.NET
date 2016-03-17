@@ -1,5 +1,6 @@
 ﻿using BlogEngine.Core;
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Web.UI;
 
@@ -34,6 +35,15 @@ public partial class AncientByte : System.Web.UI.MasterPage
         {
             aLogin.HRef = Utils.RelativeWebRoot + "Account/login.aspx";
             aLogin.InnerText = Resources.labels.login;
+        }
+    }
+
+    protected void Page_PreRender(object sender, EventArgs e)
+    {
+        var actions = BlogEngine.NET.Custom.Extensions.Pipeline.ActionsOnLoad;
+        foreach (var a in actions)
+        {
+            a(sender, e);
         }
     }
 }

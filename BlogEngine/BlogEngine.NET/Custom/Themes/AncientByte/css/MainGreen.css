@@ -116,6 +116,9 @@ Nav#MainMenu a:hover {
   font-size: 1.2em;
   text-decoration: underline;
 }
+.floatControls {
+  text-align: right;
+}
 footer {
   font-family: ancientbyte;
 }
@@ -174,6 +177,9 @@ a:hover {
 .post-comment-link,
 .post-tags {
   font-size: 1.2em;
+  font-family: arial;
+}
+.post-body {
   font-family: arial;
 }
 .post-body h2 {
@@ -373,23 +379,12 @@ textarea {
 .form-group input[type=checkbox] {
   width: auto;
 }
-.widget-content ul li {
-  display: inline;
-}
-.widget input[type=text] {
-  background-color: #2d4031;
-  color: #dadada;
-  border: 1px solid #2d4031;
+.widget input[type=text],
+input[type=button] {
+  background: #4a584a;
+  color: #d9d9d9;
+  border: 1px solid #4a584a;
   padding: 5px;
-}
-.widget input[type=button] {
-  background-color: #dadada;
-  color: #2d4031;
-  border: 2px solid #dadada;
-  padding: 5px;
-}
-.widget-content a {
-  display: block;
 }
 .widget {
   margin: 15px;
@@ -416,6 +411,23 @@ textarea {
   margin: 5px 0 0 10px;
   border: 1px solid #000000;
 }
+#widgetzone_Side_Widgets {
+  position: absolute;
+  right: 15px;
+  top: 200px;
+  font-size: 16px;
+}
+#widgetzone_Side_Widgets .widget-header {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-family: ancientbyte;
+}
+#widgetzone_Side_Widgets ul {
+  list-style: none;
+  margin: 15px 0 0 0;
+  padding: 0;
+}
 .colorsRed {
   width: 32px;
   height: 32px;
@@ -430,4 +442,25 @@ textarea {
   width: 32px;
   height: 32px;
   background: url(../img/colorsBW.png);
+}
+.widget-content ul {
+  margin: 0;
+  padding: 0;
+}
+.widget-content ul li {
+  display: block;
+}
+.download {
+  font-size: 18px;
+}
+.download:before {
+  font-family: FontAwesome;
+  padding: 5px;
+  content: "\f019";
+}
+.syntaxhighlighter {
+  overflow: hidden !important;
+}
+.syntaxhighlighter .line {
+  font-size: 12px !important;
 }

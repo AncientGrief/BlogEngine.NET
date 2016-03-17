@@ -109,6 +109,7 @@ Nav#MainMenu a:hover
     width:70%;
 }
 
+
 #FloatMenu{
     font-family: @SecondFont;
 
@@ -122,6 +123,10 @@ Nav#MainMenu a:hover
 #FloatMenu a{ color:@Text_Logo;font-size:1.2em; text-decoration:none;}
 #FloatMenu a:hover{ color:@Text_Logo;font-size:1.2em; text-decoration:underline;}
 
+.floatControls
+{
+    text-align:right;
+}
 footer
 {
     font-family: @SecondFont;
@@ -157,6 +162,7 @@ a:hover{color:@Text_Logo;background:@Main; text-decoration:none;}
         margin:0;
         padding:15px 0 0 0;
     }
+    font-family:@MainFont;
 }
 
 .post-footer
@@ -248,31 +254,14 @@ a:hover{color:@Text_Logo;background:@Main; text-decoration:none;}
     width:auto;
 }
 
-.widget-content ul li
+.widget input[type=text], input[type=button]
 {
-	display:inline;
+	background: @Second;
+	color:@Text_Logo;
+	border:1px solid @Second;
+	padding:5px;
 }
 
-.widget input[type=text]
-{
-	background-color:#2d4031;
-		color:#dadada;
-		border:1px solid #2d4031;
-		padding:5px;
-}
-
-.widget input[type=button]
-{
-	background-color:#dadada;
-		color:#2d4031;
-		border:2px solid #dadada;
-		padding:5px;
-}
-
-.widget-content a
-{
-	display:block;
-}
 
 .widget
 {
@@ -290,6 +279,18 @@ a:hover{color:@Text_Logo;background:@Main; text-decoration:none;}
     font-size:12px;
     ul{list-style:none;margin:0; padding:0}
     li{display:inline;float:left;margin: 5px 0 0 10px;border:1px solid #000000;}
+}
+
+#widgetzone_Side_Widgets
+{
+    position:absolute;
+    right:15px;
+    top: 200px;
+
+    .widget-header{margin:0;padding:0;font-size:1.4em;font-family:@SecondFont;}
+    font-size:16px;
+    ul{list-style:none;margin:15px 0 0 0; padding:0;}
+
 }
 
 .colorsRed
@@ -310,5 +311,29 @@ a:hover{color:@Text_Logo;background:@Main; text-decoration:none;}
 {
     width:32px;
     height:32px;
-    background: url(../img/colorsBW.png);
+    background: url(../img/colorsBW.png); 
+}
+
+.widget-content ul{margin:0;padding:0;}
+.widget-content ul li{display:block;}
+
+.download
+{
+    font-size:18px;
+}
+
+.download:before
+{
+    font-family:FontAwesome;
+    padding:5px;
+    
+    content: "\f019";
+}
+
+.syntaxhighlighter
+{
+    overflow:hidden !important;
+    .line {
+        font-size:12px !important;
+    }
 }

@@ -7,7 +7,7 @@
         var app = (HttpApplication)sender;
         BlogEngineConfig.Initialize(app.Context);
     }
-        
+
     void Application_PreRequestHandlerExecute(object sender, EventArgs e)
     {
         BlogEngineConfig.SetCulture(sender, e);
