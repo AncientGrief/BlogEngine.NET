@@ -13,4 +13,10 @@
     $('.mobileMenuTrigger').click(function () {
         $('#mobileMenuContent').toggle();
     });
+
+    //Fix @ mobile click...
+    $('#searchbox input').click(function () {
+        $(this).val('');
+        $(this).focus();
+    });
 });
