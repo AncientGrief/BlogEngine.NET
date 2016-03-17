@@ -13,7 +13,7 @@
                 //string categories = CategoryLinks(", ");
                 string tags = TagLinks(", ");
                 if (!string.IsNullOrEmpty(tags)) { %>
-            , <span class="post-tags"><i class="fa fa-tags"></i><%=tags %></span>
+            ,<span class="post-tags"><i class="fa fa-tags"></i><%=tags %></span>
             <% } %>
             <a rel="nofollow" class="post-comment-link" href="<%=Post.RelativeOrAbsoluteLink %>#comment"><i class="fa fa-comment"></i>(<%=Post.ApprovedComments.Count %>)</a>
         </div>

@@ -1,0 +1,163 @@
+﻿@media(max-width:1234px)
+{
+    #FloatMenu, #widgetzone_Side_Widgets
+    {
+        display:none;
+        position:relative;
+        float:none;
+    }
+
+    #PageWrapper
+    {
+        min-height:700px;
+        padding-top:70px;
+    }
+
+    .header
+    {
+	    height: 0;
+    }
+
+    .title_red
+    {
+        font-family: @SecondFont;
+        color:@Text_Logo;
+        padding-left:70px;
+        font-size:2em;
+        line-height: 1.6;
+    }
+
+    #mobileMenu
+    {
+        position:fixed;
+        top:0;
+        width:100%;
+        height:50px;
+        background:@Main;
+    }
+
+    #mobileMenuContent
+    {
+        display:none;
+        position:fixed;
+        top:50px;
+        width:100%;
+        min-height:60px;
+        background:@Main;
+    }
+
+    .mobileMenuTrigger
+    {
+        cursor:pointer;
+    }
+
+    #mobileMenuContent ul{
+        margin:0;
+        padding:0;
+        width:100%;
+    }
+    #mobileMenuContent li
+    {
+        margin:15px;
+        padding:0;
+        width:100%;
+        list-style:none;
+        a{color:@Text_Logo;font-size:2em;width:100%;display: block;}
+        a:hover
+        {
+            background:@Second;
+        }
+    }
+
+    .pageColLeft
+    {
+	    float:left;
+	    width:90px;
+    }
+
+    .pageColRight
+    {
+	    width:auto;
+    }
+
+    .logo
+    {
+        display:none;
+    }
+
+    .logomobile{
+        width:60px;
+        height:100%;
+        margin:10px 0 0 5px;
+        background: @logo;
+        background-repeat:no-repeat;
+        background-size: 50px;
+    }
+
+    .menumobile
+    {
+        font-size:45px;
+    }
+
+    .title
+    {
+	    display:none;
+    }
+
+    Nav#MainMenu
+    {
+        display:none;
+    }
+
+    #Content
+    {
+        font-family: @SecondFont;
+	    margin: 0 auto;
+        width:90%;
+    }
+
+    footer
+    {
+        font-size:0.8em;
+    }
+
+    .comment-item .comment-header
+    {
+        border:none;
+    }
+
+    .comment-form {
+        margin-left: 0;
+        width: auto;
+    }
+
+    .comment-form input[type=text], textarea {
+        min-width: 90%;
+    }
+
+    .form-group input {widht:auto;}
+
+    #comment-form p {
+    margin-left: 0;
+    width:auto;
+    }
+
+    #widgetzone_Title_Widgets li
+                              {
+        width:auto;
+    }
+
+    .widget.search
+    {
+        margin:5px;
+        input
+            {
+            width:100%;
+            margin:2px;
+            font-size:2em;
+        }
+    }
+
+    .comment-item.notApproved .comment-content{background-color:none;}
+
+}

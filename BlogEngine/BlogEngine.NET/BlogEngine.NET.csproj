@@ -811,6 +811,7 @@
     <Content Include="Custom\Themes\AncientByte\css\_ColorsBW.less" />
     <Content Include="Custom\Themes\AncientByte\css\MainBW.less" />
     <Content Include="Custom\Widgets\CSSSwitch\widget.cshtml" />
+    <Content Include="Custom\Themes\AncientByte\css\_mobileMain.less" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />

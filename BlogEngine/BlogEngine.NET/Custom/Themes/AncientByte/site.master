@@ -37,7 +37,7 @@
 		        <div class="pageColLeft header"><div class="logo"></div></div>
 		        <div class="pageColRight header">
 			        <div class="title">
-				        <span class="title_red">ANCIENTBYTE</span><span class="title_grey">.software</span>
+				        <a href="<%=Utils.AbsoluteWebRoot %>"><span class="title_red">ANCIENTBYTE</span><span class="title_grey">.software</span></a>
 			        </div>
 			        <nav id="MainMenu">
 				        <ul>
@@ -89,6 +89,26 @@
 
         <blog:WidgetZone ID="SidebarWidgetZone" runat="server" ZoneName="Side_Widgets" />
 
+        <div id="mobileMenu">
+            <a href="<%=Utils.AbsoluteWebRoot %>"><div class="logomobile pull-left"></div><span class="title_red">ANCIENTBYTE</span></a>
+            <div class="pull-right menumobile">
+                <i class="fa fa-bars mobileMenuTrigger"></i>
+            </div>
+        </div>
+        <div id="mobileMenuContent">
+		    <ul>
+                <li><a href="<%=Utils.AbsoluteWebRoot %>"><%=Resources.labels.home %> </a> </li>
+
+                <%foreach (BlogEngine.Core.Page parentPage in BlogEngine.Core.Page.Pages.Where(p => !p.HasParentPage && p.IsPublished && p.ShowInList).OrderBy(p => p.SortOrder))
+                    { %>
+                <li data-menu-id="<%=parentPage.Title %>" class="<%= parentPage.HasChildPages ? "hasChildren" : ""%>"><a href="<%=parentPage.RelativeLink %>" class="dropdown-m"><%=parentPage.Title%></a></li>
+                <% } %>
+
+                <%--<li><a href="<%=Utils.AbsoluteWebRoot %>archive<%= BlogConfig.FileExtension %>"><%=Resources.labels.archive %></a></li>--%>
+                <li><a href="<%=Utils.AbsoluteWebRoot %>contact<%= BlogConfig.FileExtension %>"><%=Resources.labels.contact %></a></li>
+		    </ul>
+            <blog:WidgetZone ID="WidgetZone12" runat="server" ZoneName="Title_Widgets" />
+        </div>
     </form>
 </body>
 </html>

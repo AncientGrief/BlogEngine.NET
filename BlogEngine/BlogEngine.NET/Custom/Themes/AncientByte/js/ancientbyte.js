@@ -8,4 +8,9 @@
         $('*[data-menu-child=' + $(this).data('menu-id') + ']').toggle();
         $(this).removeClass('active');
     });
+
+    //Mobile click
+    $('.mobileMenuTrigger').click(function () {
+        $('#mobileMenuContent').toggle();
+    });
 });
