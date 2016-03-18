@@ -461,7 +461,7 @@ input[type=button] {
   content: "\f019";
 }
 .syntaxhighlighter {
-  overflow: hidden !important;
+  overflow: auto !important;
 }
 .syntaxhighlighter .line {
   font-size: 12px !important;
@@ -597,5 +597,8 @@ input[type=button] {
   }
   .comment-item.notApproved .comment-content {
     background-color: none;
+  }
+  .post-body img {
+    width: 90%;
   }
 }
