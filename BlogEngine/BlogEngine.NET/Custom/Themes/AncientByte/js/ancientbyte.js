@@ -15,7 +15,7 @@
     });
 
     //Fix @ mobile click...
-    $('#searchbox input').click(function () {
+    $('#searchbox input').one("click", function () {
         $(this).val('');
         $(this).focus();
     });
