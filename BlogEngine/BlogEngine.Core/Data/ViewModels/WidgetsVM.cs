@@ -65,6 +65,9 @@ namespace BlogEngine.Core.Data.ViewModels
                             }
                         }
                         //------------------------------
+                        //Prevent adding duplicates (e.g. widget zone for desktop and mobile view with the same ID)
+                        if (WidgetZones.Exists(x => x.Id == zone.Id))
+                            continue;
 
                         WidgetZones.Add(zone);
                         cnt = to;
