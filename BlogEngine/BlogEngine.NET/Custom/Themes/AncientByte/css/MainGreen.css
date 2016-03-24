@@ -462,6 +462,7 @@ input[type=button] {
 }
 .syntaxhighlighter {
   overflow: auto !important;
+  margin: 10px;
 }
 .syntaxhighlighter .line {
   font-size: 12px !important;
@@ -600,5 +601,9 @@ input[type=button] {
   }
   .post-body img {
     width: 90%;
+  }
+  #bodyContent img {
+    max-width: 100%;
+    height: auto;
   }
 }
