@@ -463,6 +463,7 @@ input[type=button] {
 .syntaxhighlighter {
   overflow: auto !important;
   padding: 10px;
+  font-size: 1.3em !Important;
 }
 .syntaxhighlighter .line {
   font-size: 12px !important;
